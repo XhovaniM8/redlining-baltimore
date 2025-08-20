@@ -722,3 +722,45 @@ body {
         max-width: 85%;
     }
 }
+
+/* ============================================
+   Global Typography & Spacing Consistency
+=============================================== */
+
+/* Paragraphs */
+p {
+    margin: 0 0 1.5rem 0;
+    /* bottom spacing only */
+    line-height: 1.8;
+    font-size: 1.1rem;
+    text-align: justify;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Headings */
+h2, h3 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Research text wrapper */
+.research-text {
+    margin-bottom: 2rem;
+}
+
+/* Ensure intro meta (author/date/course) aligns neatly */
+.intro-section .research-text p {
+    text-align: center;
+    margin-bottom: .75rem;
+}
+
+/* Keep all section content centered within container */
+.container>.research-text,
+.container>.research-grid {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+}
