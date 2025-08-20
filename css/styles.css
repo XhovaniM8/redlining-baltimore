@@ -32,6 +32,10 @@ body {
     overflow-x: hidden;
 }
 
+p {
+    margin: 0
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -90,7 +94,7 @@ body {
     text-align: center;
     position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.35)),
-        url("media/background-image.jpg") center/cover no-repeat;
+        url("../media/background.webp") center/cover no-repeat;
 }
 
 .hero-content {
