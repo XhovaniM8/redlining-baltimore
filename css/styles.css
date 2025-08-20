@@ -776,3 +776,76 @@ h3 {
     margin-right: auto;
     max-width: 900px;
 }
+
+/* ===== Center images + captions, and place figures full-width below text ===== */
+
+/* Make any figure/media block a vertical stack, centered */
+figure,
+.media-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 32px auto;
+    max-width: 1000px;
+    /* feel free to tweak */
+    width: 100%;
+}
+
+/* Ensure figures inside grids span the full row (so they appear under the text) */
+.research-grid figure,
+.research-grid .media-container {
+    grid-column: 1 / -1;
+}
+
+/* Images: always centered and responsive */
+.figure-img,
+.media-container img,
+figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 1000px;
+    /* matches figure width cap */
+    margin: 12px auto 0;
+    /* centers and nudges below text */
+}
+
+/* Captions: always centered right under the image */
+.figure-caption,
+figure>figcaption {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #555;
+    font-style: italic;
+    margin: 10px auto 0;
+    max-width: 900px;
+}
+
+/* Remove any older size constraints that might fight centering */
+.figure-smaller,
+.figure-wide {
+    max-width: 1000px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+}
+
+/* Optional: slightly tighten grid gap so text→image feels connected */
+.research-grid {
+    gap: 28px;
+}
+
+/* Mobile polish */
+@media (max-width: 768px) {
+
+    figure,
+    .media-container {
+        max-width: 100%;
+        margin: 24px auto;
+    }
+
+    .figure-img,
+    .media-container img,
+    figure img {
+        max-width: 100%;
+    }
+}
