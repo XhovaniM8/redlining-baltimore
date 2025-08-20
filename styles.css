@@ -18,14 +18,14 @@ html {
     --brown: #8b4513;
     --bg-cream-1: #f5f1eb;
     --bg-cream-2: #e8ddd4;
-    --shadow-lg: 0 15px 35px rgba(0, 0, 0, .15);
-    --shadow-md: 0 10px 30px rgba(0, 0, 0, .1);
-    --shadow-sm: 0 5px 15px rgba(0, 0, 0, .1);
+    --shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.15);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.1);
     --radius: 10px;
 }
 
 body {
-    font-family: 'Georgia', serif;
+    font-family: "Georgia", serif;
     line-height: 1.75;
     color: var(--text);
     background: #fff;
@@ -55,11 +55,11 @@ body {
     top: 20px;
     right: 20px;
     z-index: 1000;
-    background: rgba(245, 241, 235, .95);
+    background: rgba(245, 241, 235, 0.95);
     padding: 12px 16px;
     border-radius: 30px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, .1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .nav ul {
@@ -72,7 +72,7 @@ body {
     text-decoration: none;
     color: var(--text);
     font-weight: 600;
-    transition: color .25s;
+    transition: color 0.25s;
 }
 
 .nav a:hover {
@@ -89,9 +89,8 @@ body {
     justify-content: center;
     text-align: center;
     position: relative;
-    background:
-        linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .35)),
-        url('media/background-image.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.35)),
+        url("media/background-image.jpg") center/cover no-repeat;
 }
 
 .hero-content {
@@ -106,14 +105,14 @@ body {
     font-weight: 300;
     margin-bottom: 1rem;
     color: #fff;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, .45);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.45);
 }
 
 .hero .subtitle {
     font-size: 1.25rem;
     font-style: italic;
     color: #f1f1f1;
-    opacity: .95;
+    opacity: 0.95;
 }
 
 .scroll-indicator {
@@ -125,7 +124,12 @@ body {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateX(-50%) translateY(0);
     }
 
@@ -163,7 +167,6 @@ body {
     background: none !important;
 }
 
-
 /* =========================================================
    Research (global layout + text rules)
 ========================================================= */
@@ -174,7 +177,7 @@ body {
 }
 
 .research::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     right: 0;
@@ -183,7 +186,7 @@ body {
 }
 
 .section-title {
-    font-size: clamp(1.75rem, 2.6vw + .6rem, 3rem);
+    font-size: clamp(1.75rem, 2.6vw + 0.6rem, 3rem);
     text-align: center;
     margin-bottom: 3rem;
     color: var(--text);
@@ -191,7 +194,7 @@ body {
 }
 
 .section-title::after {
-    content: '';
+    content: "";
     display: block;
     width: 100px;
     height: 3px;
@@ -241,7 +244,7 @@ body {
     padding: 20px;
     margin: 30px 0;
     border-radius: 5px;
-    background: rgba(212, 175, 55, .1);
+    background: rgba(212, 175, 55, 0.1);
 }
 
 /* =========================================================
@@ -249,19 +252,17 @@ body {
 ========================================================= */
 .media-container {
     position: relative;
-    background: #f8f8f8;
     border-radius: var(--radius);
     overflow: hidden;
-    box-shadow: var(--shadow-md);
-    transition: transform .25s ease;
-
-    /* ✅ Center block itself */
+    /* box-shadow: var(--shadow-md); */
+    transition: transform 0.25s ease;
     margin: 40px auto;
     max-width: 100%;
     /* allow full width */
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: transparent;
 }
 
 .media-container:hover {
@@ -269,31 +270,32 @@ body {
 }
 
 .figure-img {
+    background: transparent;
     display: block;
-    width: 100%;
+    width: 90%;
     /* fill container */
     max-width: 1200px;
     /* cap so it doesn’t stretch too wide on huge monitors */
     height: auto;
     margin: 20px auto;
     /* ✅ centers image */
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-sm);
+    /* border-radius: var(--radius);
+  box-shadow: var(--shadow-sm); */
 }
 
 /* ✅ Caption always centered under image */
 .figure-caption {
     text-align: center;
-    font-size: .95rem;
+    font-size: 0.95rem;
     color: #555;
-    margin: 10px 0 30px;
+    margin: 10px 0 20px;
     font-style: italic;
     max-width: 1000px;
 }
 
 /* Special cases */
 .figure-smaller {
-    max-width: 85%;
+    max-width: 50%;
     /* still centered */
     margin: 0 auto;
 }
@@ -307,7 +309,6 @@ body {
 .research-grid .media-container.figure-wide {
     grid-column: 1 / -1;
 }
-
 
 /* =========================================================
    Map Section
@@ -327,7 +328,7 @@ body {
     margin: 20px 0;
     border-radius: var(--radius);
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     background: #f8f8f8;
 }
 
@@ -341,7 +342,7 @@ body {
     margin: 20px auto 0;
     font-style: italic;
     color: #666;
-    font-size: .95rem;
+    font-size: 0.95rem;
     line-height: 1.6;
     max-width: 800px;
 }
@@ -360,18 +361,22 @@ body {
 ========================================================= */
 .papers-overview {
     padding: 100px 0;
-    background: linear-gradient(135deg, var(--bg-cream-1) 0%, var(--bg-cream-2) 100%);
+    background: linear-gradient(135deg,
+            var(--bg-cream-1) 0%,
+            var(--bg-cream-2) 100%);
     position: relative;
 }
 
 .papers-overview::before {
-    content: '';
+    content: "";
     position: absolute;
     top: -50px;
     left: 0;
     right: 0;
     height: 100px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(245, 241, 235, 0));
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 1),
+            rgba(245, 241, 235, 0));
 }
 
 .papers-grid {
@@ -386,14 +391,14 @@ body {
     border-radius: 15px;
     padding: 30px;
     box-shadow: var(--shadow-lg);
-    transition: transform .25s ease, box-shadow .25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
     position: relative;
     overflow: hidden;
     border-top: 4px solid var(--gold);
 }
 
 .paper-card::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -404,7 +409,7 @@ body {
 
 .paper-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, .15);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
 .paper-number {
@@ -438,13 +443,13 @@ body {
 }
 
 .tag {
-    background: rgba(212, 175, 55, .1);
+    background: rgba(212, 175, 55, 0.1);
     color: var(--brown);
     padding: 5px 12px;
     border-radius: 20px;
-    font-size: .85rem;
+    font-size: 0.85rem;
     font-weight: 600;
-    border: 1px solid rgba(212, 175, 55, .3);
+    border: 1px solid rgba(212, 175, 55, 0.3);
 }
 
 .paper-link {
@@ -453,7 +458,7 @@ body {
     text-decoration: none;
     font-weight: 700;
     border-bottom: 2px solid transparent;
-    transition: color .2s, border-color .2s;
+    transition: color 0.2s, border-color 0.2s;
 }
 
 .paper-link:hover {
@@ -515,13 +520,13 @@ body {
     padding: 15px 20px;
     margin-bottom: 10px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .08);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
     border-left: 4px solid var(--gold);
 }
 
 .citation p {
     margin: 0;
-    font-size: .98rem;
+    font-size: 0.98rem;
     line-height: 1.6;
     text-align: left;
 }
@@ -555,21 +560,21 @@ body {
 .author-name {
     font-size: 1.9rem;
     color: #fff;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     font-weight: 300;
 }
 
 .author-college {
     font-size: 1.2rem;
     color: var(--gold);
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     font-style: italic;
     text-align: center;
 }
 
 .author-major {
     font-size: 1.05rem;
-    color: rgba(255, 255, 255, .85);
+    color: rgba(255, 255, 255, 0.85);
     margin-bottom: 1.5rem;
     text-align: center;
 }
@@ -582,7 +587,7 @@ body {
     font-size: 1.05rem;
     line-height: 1.8;
     margin-bottom: 1.2rem;
-    opacity: .9;
+    opacity: 0.9;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -611,7 +616,8 @@ body {
     text-decoration: none;
     border-radius: 30px;
     font-weight: 700;
-    transition: transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease,
+        color 0.15s ease;
     display: inline-block;
 }
 
@@ -628,7 +634,7 @@ body {
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* =========================================================
@@ -638,8 +644,7 @@ body {
     width: 100vw;
     height: 60vh;
     margin-left: calc(-50vw + 50%);
-    background:
-        linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)),
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
         url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect width="1200" height="600" fill="%23d4af37"/><polygon points="0,600 300,400 600,500 900,300 1200,400 1200,600" fill="%23f4e4bc"/><circle cx="200" cy="150" r="50" fill="%238b4513" opacity="0.3"/><circle cx="800" cy="200" r="80" fill="%238b4513" opacity="0.2"/></svg>');
     background-size: cover;
     background-position: center;
@@ -663,7 +668,7 @@ body {
 
 .image-overlay p {
     font-size: 1.1rem;
-    opacity: .9;
+    opacity: 0.9;
 }
 
 /* =========================================================
@@ -742,7 +747,8 @@ p {
 }
 
 /* Headings */
-h2, h3 {
+h2,
+h3 {
     margin-top: 1rem;
     margin-bottom: 1rem;
     text-align: center;
@@ -756,7 +762,7 @@ h2, h3 {
 /* Ensure intro meta (author/date/course) aligns neatly */
 .intro-section .research-text p {
     text-align: center;
-    margin-bottom: .75rem;
+    margin-bottom: 0.75rem;
 }
 
 /* Keep all section content centered within container */
