@@ -151,10 +151,10 @@ body {
 .intro-section::before {
     content: "";
     position: absolute;
-    top: -40px;
+    top: -x;
     left: 0;
     right: 0;
-    height: 40px;
+    height: 20px;
 }
 
 .intro-section::before,
@@ -741,14 +741,14 @@ p {
 
 /* Headings */
 h2, h3 {
-    margin-top: 2.5rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     text-align: center;
 }
 
 /* Research text wrapper */
 .research-text {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 /* Ensure intro meta (author/date/course) aligns neatly */
